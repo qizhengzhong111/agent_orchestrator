@@ -1,7 +1,6 @@
-# Documentation
+# Agent Orchestrator
 
 ## 1. Project Structure
-
 ```
 agent_orchestrator:
 ├── DemoData                 # csv files for data preparation agent and reconciliation agent
@@ -74,4 +73,42 @@ You can create the key by creating the model deployment in
 Dataset that is used by `data preparation agent` and `reconciliation agent`.
 
 
-Create venv with requirements
+## 4. How to
+
+### 4.1 Start up
+````commandline
+python -m venv venv
+venv\Scripts\activate.ps1
+pip install -r requirements.txt
+````
+
+#### Run the application as a service
+````commandline
+uvicorn multiagentchat:app --port 8001
+````
+
+
+### 4.2 How to run
+#### Run the application for development
+I have already defined the main in the `langgraph_lite.py`, you can run it directly by customizing the `message`
+
+```python
+if __name__ == "__main__":
+    message = "tell me something about my data"
+    result = multiagent_app.invoke({"input": message})
+    output = result["output"]
+```
+
+#### Alternatively you can configure to run it from your frontend
+
+```JavaScript
+const response = await fetch('http://localhost:8001/multiagentchat', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        "input": "remove duplicate rows and then do a reconciliation"
+      })
+    });
+```
