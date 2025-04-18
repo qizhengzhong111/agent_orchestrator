@@ -3,7 +3,7 @@
 ## 1. Project Structure
 
 ```
-LG_lite:
+agent_orchestrator:
 ├── DemoData                 # csv files for data preparation agent and reconciliation agent
 ├── config.json              # configuration for getting access tokens
 ├── acquire_access_token.py  # get access token
