@@ -1,5 +1,7 @@
 # Agent Orchestrator
 
+This project is a multi-agent system powered by LangGraph, designed to orchestrate multiple agents exposed via APIs. The system uses natural language input from users to determine which agents to invoke, route data accordingly, and produce an appropriate response — all within a dynamic, graph-based workflow.
+
 ## 1. Project Structure
 ```
 agent_orchestrator:
