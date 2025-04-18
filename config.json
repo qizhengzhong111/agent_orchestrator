@@ -1,0 +1,12 @@
+{
+    "KeyVaultUri": "https://testadminaccounts.vault.azure.net/",
+    "TestUserPasswordSecret": "GlobalTenantPassword",
+    "TestUserId": "globaladmin@FinanceCopilotDemo.onmicrosoft.com",
+    "ClientId": "5dafa278-22b2-490c-8a01-06238fec33f2",
+    "TenantId": "35462824-6197-4756-9bfd-f971d9d38c35",
+    "ClientScopes": [
+        "api://localhost:3000/5dafa278-22b2-490c-8a01-06238fec33f2/access_as_user"
+    ],
+    "TestEnvironmentId": "e034ccd0-fba2-eede-ba0c-2a3bce91efba",
+    "TestDataverseUrl": "https://orgb3aa67dd.crm10.dynamics.com/"
+}
